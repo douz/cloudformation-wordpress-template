@@ -21,6 +21,7 @@ wp-admin/
 wp-includes/
 wp-*.php
 !wp-content/plugins/wp-mail-smtp/wp-mail-smtp.php
+!wp-config.php
 xmlrpc.php
 index.php
 readme.html
