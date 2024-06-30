@@ -22,6 +22,7 @@
     }
   },
   "require": {
+    "wpackagist-theme/twentytwentyfour":"1.1",
     "humanmade/wordpress-pecl-memcached-object-cache": "v2.1.0",
     "wpackagist-plugin/wordpress-importer": "0.8.1",
     "wpackagist-plugin/hyperdb": "1.9"
