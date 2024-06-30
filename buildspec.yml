@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      php: 8.2
+
+  build:
+    commands:
+      - ./ci-scripts/build-wp.sh
+
+artifacts:
+  files:
+    - wordpress/**/*
+    - deploy-scripts/*
+    - configs/**/*
+    - appspec.yml
+  name: wordpress-built-$(date +%Y-%m-%d)

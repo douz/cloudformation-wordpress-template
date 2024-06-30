@@ -1,0 +1,48 @@
+{
+  "name": "10up/wp",
+  "description": "10up - WordPress Site Template",
+  "authors": [
+    {
+      "name": "10up Inc",
+      "email": "voltron@10up.com"
+    }
+  ],
+  "repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    },
+    "platform": {
+      "php": "8.2"
+    }
+  },
+  "require": {
+    "humanmade/wordpress-pecl-memcached-object-cache": "v2.1.0",
+    "wpackagist-plugin/wordpress-importer": "0.8.1",
+    "wpackagist-plugin/hyperdb": "1.9"
+	},
+  "extra": {
+		"installer-paths": {
+			"themes/{$name}": [
+				"type:wordpress-theme"
+			],
+			"plugins/{$name}": [
+				"type:wordpress-plugin"
+			],
+			"mu-plugins/{$name}": [
+				"type:wordpress-muplugin"
+			]
+		}
+	},
+  "scripts": {
+		"post-autoload-dump": [
+      "cp ./plugins/hyperdb/db.php ./db.php && rm -rf ./plugins/hyperdb",
+      "cp ./vendor/humanmade/wordpress-pecl-memcached-object-cache/object-cache.php ./object-cache.php"
+		]
+	}
+}

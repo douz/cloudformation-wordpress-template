@@ -1,0 +1,31 @@
+# Add files with and without the wp-content prefix
+wp-content/uploads/*
+uploads/*
+wp-content/object-cache.php
+object-cache.php
+wp-content/plugins/
+plugins/
+
+# Dev-only
+.DS_Store
+*.log
+*node_modules/
+*vendor/
+wp-content/db.php
+db.php
+wp-content/object-cache.php
+object-cache.php
+
+# Standard Wordpress
+wp-admin/
+wp-includes/
+wp-*.php
+!wp-content/plugins/wp-mail-smtp/wp-mail-smtp.php
+xmlrpc.php
+index.php
+readme.html
+license.txt
+
+# builds
+wordpress
+payload

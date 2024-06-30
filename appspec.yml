@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: wordpress
+    destination: /var/www/html/wordpress
+  - source: configs/nginx/default.conf
+    destination: /etc/nginx/conf.d/
+file_exists_behavior: OVERWRITE
+hooks:
+  AfterInstall:
+    - location: deploy-scripts/reload-services.sh
+      timeout: 300
+      runas: root
