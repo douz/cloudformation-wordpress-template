@@ -13,7 +13,11 @@ composer.lock
 installed.json
 /tasks
 /conf
+appspec.yml
+buildspec.yml
+/configs
 /ci-scripts
+/deploy-scripts
 .github
 */package-lock.json
 package-lock.json
