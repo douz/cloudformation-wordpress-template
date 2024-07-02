@@ -15,6 +15,10 @@ namespace TenUp\LoadS3;
  * Load S3 Uploads' vendor folder, so WP-CLI commands work.
  */
 function load_s3_vendor_folder() {
+	if ( ! defined( '\WP_CLI' ) || ! \WP_CLI ) {
+		return;
+	}
+
 	$s3_folder = WP_PLUGIN_DIR . '/s3-uploads';
 
 	if ( ! is_dir( $s3_folder ) ) {
