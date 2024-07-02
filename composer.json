@@ -26,8 +26,7 @@
     "wpackagist-plugin/redis-cache":"2.5.2",
     "wpackagist-plugin/wordpress-importer": "0.8.1",
     "wpackagist-plugin/hyperdb": "1.9",
-    "humanmade/s3-uploads": "3.0.7",
-    "aws/aws-sdk-php": "^3"
+    "humanmade/s3-uploads": "3.0.7"
 	},
   "extra": {
 		"installer-paths": {
