@@ -5,6 +5,8 @@ wp-content/object-cache.php
 object-cache.php
 wp-content/plugins/
 plugins/
+wp-content/themes/
+themes/
 
 # Dev-only
 .DS_Store

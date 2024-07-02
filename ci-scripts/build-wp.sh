@@ -7,7 +7,9 @@ set -x
 set -euo pipefail
 
 # Set variables
-WORDPRESS_VERSION="6.5.4"
+## Getting the latest WordPress core version from WordPress.org via API. If you want to manually control the WordPress core
+## version in your cluster(recommended) replace the API call with the exact version number you want to install
+WORDPRESS_VERSION=$(curl -s "https://api.wordpress.org/core/version-check/1.7/" | jq -r '[.offers[]|select(.response=="upgrade")][0].version')
 S3_UPLOADS_VERSION="3.0.7"
 
 # Create file structure
