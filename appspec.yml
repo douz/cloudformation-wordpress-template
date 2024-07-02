@@ -9,14 +9,30 @@ file_exists_behavior: OVERWRITE
 permissions:
   - object: /var/www/html/wordpress
     pattern: "*"
-    owner: nginx
-    group: nginx
+    owner: nobody
+    group: nobody
+    mode: 755
     type:
       - file
   - object: /var/www/html/wordpress
     pattern: "*"
+    owner: nobody
+    group: nobody
+    mode: 755
+    type:
+      - directory
+  - object: /var/www/html/wordpress/wp-content/uploads
+    pattern: "*"
     owner: nginx
     group: nginx
+    mode: 755
+    type:
+      - file
+  - object: /var/www/html/wordpress/wp-content/uploads
+    pattern: "*"
+    owner: nginx
+    group: nginx
+    mode: 755
     type:
       - directory
 hooks:

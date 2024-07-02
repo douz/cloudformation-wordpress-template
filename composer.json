@@ -23,9 +23,10 @@
   },
   "require": {
     "wpackagist-theme/twentytwentyfour":"1.1",
-    "humanmade/wordpress-pecl-memcached-object-cache": "v2.1.0",
+    "wpackagist-plugin/redis-cache":"2.5.2",
     "wpackagist-plugin/wordpress-importer": "0.8.1",
-    "wpackagist-plugin/hyperdb": "1.9"
+    "wpackagist-plugin/hyperdb": "1.9",
+    "aws/aws-sdk-php": "^3"
 	},
   "extra": {
 		"installer-paths": {
@@ -43,7 +44,7 @@
   "scripts": {
 		"post-autoload-dump": [
       "cp ./plugins/hyperdb/db.php ./db.php && rm -rf ./plugins/hyperdb",
-      "cp ./vendor/humanmade/wordpress-pecl-memcached-object-cache/object-cache.php ./object-cache.php"
+      "cp ./plugins/redis-cache/includes/object-cache.php ./object-cache.php"
 		]
 	}
 }
