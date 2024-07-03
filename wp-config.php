@@ -38,7 +38,7 @@ $table_prefix  = 'wp_';
 # WordPress core settings
 
 # No plugin or core updates via the admin, and no file editor.
-# All of this done via wp-cli
+# All of this done via CI/CD or WPCLI
 define( 'DISALLOW_FILE_MODS', true );
 
 # Disable all automatic updates:
@@ -50,8 +50,8 @@ define( 'DISABLE_WP_CRON', true );
 # Redis
 define( "WP_CACHE", true );
 define( 'WP_REDIS_PREFIX', 'wpsite1' );
-define( 'WP_REDIS_HOST', $secrets['WP_REDIS_SERVER'] );
-define( 'WP_REDIS_PORT', $secrets['WP_REDIS_PORT'] );
+define( 'WP_REDIS_HOST', $env_secrets->WP_REDIS_SERVER );
+define( 'WP_REDIS_PORT', $env_secrets->WP_REDIS_PORT );
 define( 'WP_REDIS_TIMEOUT', 1 );
 define( 'WP_REDIS_READ_TIMEOUT', 1 );
 define( 'WP_REDIS_DATABASE', 0 );
