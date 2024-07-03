@@ -25,8 +25,7 @@
     "wpackagist-theme/twentytwentyfour":"1.1",
     "wpackagist-plugin/redis-cache":"2.5.2",
     "wpackagist-plugin/wordpress-importer": "0.8.1",
-    "wpackagist-plugin/hyperdb": "1.9",
-    "humanmade/s3-uploads": "3.0.7"
+    "wpackagist-plugin/hyperdb": "1.9"
 	},
   "extra": {
 		"installer-paths": {
