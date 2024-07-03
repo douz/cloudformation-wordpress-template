@@ -43,3 +43,5 @@
     define( 'DB_USER', $secrets['WP_DB_USER'] );
     define( 'DB_PASSWORD', $secrets['WP_DB_PASSWORD'] );
     ```
+
+***Note: You'll need to install the `s3-uploads` plugin with composer instead of using the [build-wp.sh](ci-scripts/build-wp.sh) script, other way it will stop working***
