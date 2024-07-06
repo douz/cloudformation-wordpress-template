@@ -35,19 +35,21 @@ define('NONCE_SALT',       $env_secrets->WP_NONCE_SALT );
 
 $table_prefix  = 'wp_';
 
-# WordPress core settings
+/** WordPress core settings */
 
-# No plugin or core updates via the admin, and no file editor.
-# All of this done via CI/CD or WPCLI
+/**
+* No plugin or core updates via the admin, and no file editor.
+* All of this done via CI/CD or WPCLI
+*/
 define( 'DISALLOW_FILE_MODS', true );
 
-# Disable all automatic updates:
+/** Disable all automatic updates */
 define( 'AUTOMATIC_UPDATER_DISABLED', true );
 
-# Disable WP CRON
+/** Disable WP CRON */
 define( 'DISABLE_WP_CRON', true );
 
-# Redis
+/** Redis */
 define( "WP_CACHE", true );
 define( 'WP_REDIS_PREFIX', 'wpsite1' );
 define( 'WP_REDIS_HOST', $env_secrets->WP_REDIS_SERVER );
@@ -56,7 +58,7 @@ define( 'WP_REDIS_TIMEOUT', 1 );
 define( 'WP_REDIS_READ_TIMEOUT', 1 );
 define( 'WP_REDIS_DATABASE', 0 );
 
-# S3
+/** s3-uploads */
 define( 'S3_UPLOADS_BUCKET', $env_secrets->S3_UPLOADS_BUCKET );
 define( 'S3_UPLOADS_REGION', $env_secrets->S3_UPLOADS_REGION );
 define( 'S3_UPLOADS_USE_INSTANCE_PROFILE', true );
