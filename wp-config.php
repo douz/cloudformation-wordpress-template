@@ -37,6 +37,12 @@ $table_prefix  = 'wp_';
 
 /** WordPress core settings */
 
+/** Memory limits
+ * Can't be higher than the PHP memory_limit(99-php-include.ini)
+ */
+define( 'WP_MEMORY_LIMIT', '128' );				// PHP scrips limit
+define( 'WP_MAX_MEMORY_LIMIT', '256' );		// WP Admin scripts limit
+
 /**
 * No plugin or core updates via the admin, and no file editor.
 * All of this done via CI/CD or WPCLI
